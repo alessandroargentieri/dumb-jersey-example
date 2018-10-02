@@ -1,11 +1,14 @@
 package com.quicktutorialz.jax.endpoints;
 
 import com.quicktutorialz.jax.entities.Todo;
+
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.io.IOException;
 import java.util.Map;
 import com.google.gson.Gson;
+import com.quicktutorialz.jax.services.TodoService;
 
 /*
 https://docs.oracle.com/cd/E19776-01/820-4867/6nga7f5np/index.html
@@ -13,6 +16,7 @@ https://docs.oracle.com/cd/E19776-01/820-4867/6nga7f5np/index.html
 
 @Path("/ciao")
 public class CiaoController {
+
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
